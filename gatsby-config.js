@@ -12,13 +12,13 @@ module.exports = {
       resolve: `gatsby-source-contentstack`,
       options: {
         // Required: API Key is a unique key assigned to each stack.
-        api_key: `blt145ddb4839850191`,
+        api_key: process.env.CONTENTSTACK_API_KEY,
   
         // Required: Delivery Token is a read-only credential. 
-        delivery_token: `csbe8771b08d0fe790a5cb259e`,
+        delivery_token: process.env.CONTENTSTACK_DELIVERY_TOKEN,
         
         // Required: Environment where you published your data.
-        environment: `master`,
+        environment: process.env.CONTENTSTACK_ENVIRONMENT,
   
         // Optional: CDN set this to point to other cdn end point. For eg: https://eu-cdn.contentstack.com/v3 
         // cdn: `cdn_url`,
